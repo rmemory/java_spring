@@ -12,6 +12,7 @@ public class HelloSpringApp {
 		// retrieve bean from the spring container
 		ICoach trackCoach = context.getBean("trackCoach", ICoach.class);
 		ICoach baseballCoach = context.getBean("baseballCoach", ICoach.class);
+		ICoach cricketCoach = context.getBean("cricketCoach", ICoach.class);
 		
 		// call methods on the bean
 		
@@ -19,6 +20,10 @@ public class HelloSpringApp {
 		System.out.println(trackCoach.getDailyFortune());
 		System.out.println(baseballCoach.getDailyWorkout());
 		System.out.println(baseballCoach.getDailyFortune());
+		System.out.println(cricketCoach.getDailyWorkout());
+		System.out.println(cricketCoach.getDailyFortune());
+		System.out.println(((CricketCoach)cricketCoach).getTeam());
+		System.out.println(((CricketCoach)cricketCoach).getEmailAddress());
 		
 		// close the context
 		context.close();
