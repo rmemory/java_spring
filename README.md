@@ -86,3 +86,15 @@ ie. Factory Pattern
 
 ICoach theCoach = context.getBean("myCoach", ICoach.class);
 
+# Spring container summary
+
+It is an XML file used to construct Java classes.
+
+It can inject/construct other classes into constructors.
+
+It can inject property values and read those property values from propery files.
+
+The container is constructed using ClassPathXmlApplicationContext. Beans are obtained using getBean()
+
+ICoach trackCoach = context.getBean("trackCoach", ICoach.class);
+
