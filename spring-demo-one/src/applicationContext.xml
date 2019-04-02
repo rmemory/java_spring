@@ -13,15 +13,21 @@
     	<property name="rootLoggerLevel" value="FINE" />
     	<property name="printedLoggerLevel" value="FINE"/>
     </bean>
+    <bean
+    	id="myFortuneService"
+    	class="com.springdemo.services.HappyFortuneService">
+    </bean>
     <bean 
     	id="trackCoach"
     	class="com.springdemo.TrackCoach"
     	>
+    	<constructor-arg ref="myFortuneService"/>
     </bean>
     <bean 
     	id="baseballCoach"
     	class="com.springdemo.BaseballCoach"
     	>
+    	<constructor-arg ref="myFortuneService"/>
     </bean>
     
 </beans>
