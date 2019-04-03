@@ -98,3 +98,39 @@ The container is constructed using ClassPathXmlApplicationContext. Beans are obt
 
 ICoach trackCoach = context.getBean("trackCoach", ICoach.class);
 
+By default all beans are singletons. Only a single instance is created and that instance is shared. The best case is stateless so you don't create race conditions.
+
+List of scopes:
+
+scope=singleton // single instance
+scope= prototype // new bean per request
+scope=request // scoped to an http web request
+scope=session // scoped to a web session
+scope=global-session // scoped to entire web session
+
+
+Bean lifecycle:
+
+When the container is started, the beans are instantiated, any dependencies are injected, then it can call custom init methods. 
+
+init-method="doMyStartupStuff"
+
+The bean can then be used until context.close. After context.close is called, Spring will call any custom destroy methods.
+
+destroy-method="doMyCleanupStuff"
+
+Note: For "prototype" scoped beans, Spring does not call the destroy method. 
+
+## lifecycle method signtures
+
+Access modifier
+The methods can have any access modifier (public, protected, private)
+
+Return type
+The methods can have any return type. However, "void' is most commonly used. If you give a return type just note that you will not be able to capture the return value. As a result, "void" is commonly used.
+
+Method name
+The methods can have any method name.
+
+Arguments
+The methods can not accept any arguments. The method should be no-arg.

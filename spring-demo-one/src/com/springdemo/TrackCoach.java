@@ -23,4 +23,14 @@ public class TrackCoach implements ICoach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	// bean init method
+	public void doMyStartupStuff() {
+		System.out.println("Startup method");
+	}
+	
+	// bean destroy method (only called on singletons apparently)
+	public void doMyShutdownStuff() {
+		System.out.println("Shutdown method");
+	}
 }
