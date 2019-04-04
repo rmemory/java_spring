@@ -5,7 +5,7 @@ import java.util.Random;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements IFortuneService {
+public class RandomFortuneService implements IFortuneService {
 	private String[] fortuneArray = {
 			"This is your lucky day.",
 			"This is your unlucky day.",
