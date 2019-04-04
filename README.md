@@ -134,3 +134,4 @@ The methods can have any method name.
 
 Arguments
 The methods can not accept any arguments. The method should be no-arg.
+
