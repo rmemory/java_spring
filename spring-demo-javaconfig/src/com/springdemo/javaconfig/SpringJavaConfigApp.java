@@ -9,7 +9,7 @@ public class SpringJavaConfigApp {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SportConfig.class);
 		
 		// get bean
-		ICoach theCoach = context.getBean("tennisCoach", ICoach.class);
+		ICoach theCoach = context.getBean("swimCoach", ICoach.class);
 
 		// use bean
 		System.out.println(theCoach.getDailyWorkout());

@@ -16,7 +16,7 @@ public class TennisCoach implements ICoach {
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Practice your backhand.";
+		return "Swim laps.";
 	}
 
 	@Override
