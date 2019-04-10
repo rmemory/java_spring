@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
-Implementation-Title: spring_sample
+Implementation-Title: spring_sample_xml
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: rmemory
 Implementation-Vendor-Id: com.pluralsight
 Build-Jdk: 1.8.0_201
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
- ot-starter-parent/spring_sample
+ ot-starter-parent/spring_sample_xml
 Created-By: Maven Integration for Eclipse
 

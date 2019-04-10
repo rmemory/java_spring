@@ -7,7 +7,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.pluralsight</groupId>
-  <artifactId>spring_sample</artifactId>
+  <artifactId>spring_sample_xml</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
   	<properties>
