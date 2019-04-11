@@ -8,14 +8,16 @@ import org.springframework.stereotype.Service;
 import com.pluralsight.model.Customer;
 import com.pluralsight.repository.CustomerRepository;
 
-@Service("customerService")
+@Service("customerService") /* appContext.getBean("customerService", CustomerService.class); */
 public class CustomerServiceImpl implements CustomerService {
 	private CustomerRepository customerRepository;
 	
+	/* Default constructor */
 	public CustomerServiceImpl() {
 		
 	}
 	
+	/* Constructor used for constructor injection */
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}
@@ -27,7 +29,8 @@ public class CustomerServiceImpl implements CustomerService {
 	public List<Customer>findAll() {
 		return customerRepository.findAll();
 	}
-	@Autowired
+	
+	@Autowired /* This works because HibernateCustomerRepositoryImpl is setup as a Repository */
 	public void setCustomerRepository(CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}

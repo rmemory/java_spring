@@ -8,12 +8,12 @@ import org.springframework.stereotype.Service;
 import com.pluralsight.model.Customer;
 import com.pluralsight.repository.CustomerRepository;
 
-@Service("customerService")
+@Service("customerService") /* 
 public class CustomerServiceImpl implements CustomerService {
-//	@Autowired
+//	@Autowired /* field level injection */
 	private CustomerRepository customerRepository;
 	
-	@Autowired
+	@Autowired /* Constructor level injection */
 	public CustomerServiceImpl(CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}
@@ -26,7 +26,7 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerRepository.findAll();
 	}
 	
-//	@Autowired
+//	@Autowired /* Setting injection in AppConfig */
 	public void setCustomerRepository(CustomerRepository customerRepository) {
 		this.customerRepository = customerRepository;
 	}
